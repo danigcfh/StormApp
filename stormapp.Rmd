@@ -1,0 +1,48 @@
+---
+title: "Storm Prediction App Documentation"
+author: "DaniGCFH"
+date: "2024-03-29"
+output: pdf_document
+---
+
+# Storm Prediction App Documentation
+
+## Introduction
+The Storm Prediction App is a web application designed to predict the most likely weather event for a selected state and month, based on historical storm data. The app utilizes machine learning techniques, specifically a random forest classifier, to make predictions.
+
+## Getting Started
+To get started using the Storm Prediction App, follow these steps:
+
+1. **Download the Data**: Ensure you have the storm data file named `repdata_data_StormData.csv`. This file contains historical storm data and is required for the app to function.
+
+2. **Install R Packages**: Make sure you have the required R packages installed. You can install them using the following commands:
+    ```R
+    install.packages(c("shiny", "dplyr", "randomForest", "lubridate", "readr", "stringr"))
+    ```
+
+3. **Run the Application**: Run the R script containing the Shiny app code.
+
+4. **Interact with the App**: Once the application is running, you can interact with it by selecting a state and a month, then clicking the "Predict" button to see the most likely weather event for the selected criteria.
+
+## Usage
+The Storm Prediction App consists of the following components:
+
+### 1. Sidebar Panel
+- **State Selection**: Choose a state from the dropdown menu.
+- **Month Selection**: Select a month from the dropdown menu.
+- **Predict Button**: Click this button to trigger the prediction process.
+
+### 2. Main Panel
+- **Prediction Text**: This area displays the predicted weather event for the selected state and month.
+
+## How it Works
+The app works by utilizing historical storm data to train a random forest classifier. When the user selects a state and a month and clicks the "Predict" button, the app filters the data based on the user's selection. It then uses the trained model to predict the most likely weather event for that particular state and month.
+
+## Troubleshooting
+If you encounter any issues while using the app, consider the following troubleshooting steps:
+- **Data Availability**: Ensure that the storm data file (`repdata_data_StormData.csv`) is located in the correct directory and is accessible to the application.
+- **Package Installation**: Double-check that all required R packages are installed. If not, install them using the provided installation command.
+- **Error Handling**: If the app displays an error message, read the message carefully to understand the issue. Common errors include empty data subsets or missing variables.
+
+## Feedback
+If you have any feedback, suggestions, or encounter any issues while using the Storm Prediction App, please feel free to reach out to the developer for assistance.
